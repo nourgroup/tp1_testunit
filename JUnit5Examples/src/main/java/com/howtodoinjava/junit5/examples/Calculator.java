@@ -8,8 +8,8 @@ public class Calculator {
 		return i + j;
 	}
 
-	public static Double division(int i, int j) {
-		if(j==0)
+	public static Double multiplication(int i, int j) {
+		if(j%2==0)
 			throw new IllegalArgumentException(Integer.toString(j));
 		return Double.valueOf(i / j);
 	}

@@ -28,9 +28,9 @@ public class ExpectedExceptionTest
 	void testExpectedExceptionWithSameType() {
 		// 2- assert throw this exception : IllegalArgumentException
 		exceptionRule.expect(IllegalArgumentException.class);
-		exceptionRule.expectMessage("divided by 0");
+		exceptionRule.expectMessage("Second argument is an odd number");
 		Calculator cal = new Calculator();
-		cal.division(1,0);
+		cal.multiplication(1,5);
 	}
 
 }

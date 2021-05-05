@@ -9,7 +9,12 @@ import org.junit.runner.RunWith;
 public class RepeatedInvocationsTest {
 	
 	// 1- create double method to show message before all and before each
-
+	@Test
+	@BeforeAll
+	@BeforeEach
+	private static String message () {
+		return "show message before all and before each";
+	}
 	// 2- test title
 	@DisplayName("Repeated Invocations Test")
 	// 3- repeat it 5 times
