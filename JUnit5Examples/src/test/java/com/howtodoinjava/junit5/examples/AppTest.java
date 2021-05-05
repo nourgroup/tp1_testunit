@@ -1,11 +1,14 @@
 package com.howtodoinjava.junit5.examples;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
  
 public class AppTest {
 
     // 1- exécuter avant tous
+    @Test
+    @BeforeAll
     static void setup(){
         System.out.println("@BeforeAll executed");
     }

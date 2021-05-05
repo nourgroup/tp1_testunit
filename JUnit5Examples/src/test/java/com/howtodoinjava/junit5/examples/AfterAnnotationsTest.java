@@ -1,8 +1,6 @@
 package com.howtodoinjava.junit5.examples;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.RepetitionInfo;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.*;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
@@ -10,7 +8,9 @@ import org.junit.runner.RunWith;
 public class AfterAnnotationsTest {
 
 	// 1- test title
+	@Test
 	// 2- repeat test 5 times
+	@RepeatedTest(5)
 	void addNumber(TestInfo testInfo, RepetitionInfo repetitionInfo)
 	{
 		System.out.println("Running test -> " + repetitionInfo.getCurrentRepetition());
@@ -18,11 +18,15 @@ public class AfterAnnotationsTest {
 	}
 	
 	// 3-do it after all
+	@Test
+	@AfterAll
 	public static void cleanUp(){
 		System.out.println("After All cleanUp() method called");
 	}
 	
 	// 4-do it after each
+	@Test
+	@AfterEach
 	public void cleanUpEach(){
 		System.out.println("After Each cleanUpEach() method called");
 	}
