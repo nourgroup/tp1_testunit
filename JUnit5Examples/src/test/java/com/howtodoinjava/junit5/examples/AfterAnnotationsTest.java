@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 public class AfterAnnotationsTest {
 
 	// 1- test title
-	@Test
+	@DisplayName("After Annotations Test")
 	// 2- repeat test 5 times
 	@RepeatedTest(5)
 	void addNumber(TestInfo testInfo, RepetitionInfo repetitionInfo)

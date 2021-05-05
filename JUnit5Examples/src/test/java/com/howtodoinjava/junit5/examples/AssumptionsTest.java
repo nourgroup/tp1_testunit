@@ -9,6 +9,7 @@ public class AssumptionsTest
     void testOnDev()
     {
         // 1- set dev env
+        System.setProperty("ENV", "DEV");
         Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")), AssumptionsTest::message);
     }
       
@@ -16,7 +17,9 @@ public class AssumptionsTest
     void testOnProd()
     {
         // 2- set prod env
+        System.setProperty("ENV", "PROD");
         // 3- test it with assumption
+        Assumptions.assumeFalse("DEV".equals(System.getProperty("ENV")));
     }
       
     private static String message () {
