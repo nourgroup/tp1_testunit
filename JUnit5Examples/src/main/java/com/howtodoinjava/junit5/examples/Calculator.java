@@ -9,7 +9,7 @@ public class Calculator {
 	}
 
 	public static int multiplication(int i, int j) {
-		if(j%2==0)
+		if(j%2!=0)
 			throw new IllegalArgumentException(Integer.toString(j));
 		return i * j;
 	}

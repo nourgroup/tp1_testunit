@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 // 1- defined tested package
 @Nested
 // 2- je veux inclure le tag "development"
-@Tag("DEV")
+@IncludeTags("DEV")
 public class DevelopmentTests
 {
 }
